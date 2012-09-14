@@ -4517,7 +4517,7 @@ function like this:
 >       pieces.push(escapeHTML(element));
 >     }
 >     // Empty tag
->     else if (!element.content || element.content.length == 0) {
+>     else if (element.name != "a" && (!element.content || element.content.length == 0)) {
 >       pieces.push("<" + element.name +
 >                   renderAttributes(element.attributes) + "/>");
 >     }
